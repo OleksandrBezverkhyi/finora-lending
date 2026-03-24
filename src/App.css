@@ -67,8 +67,8 @@
 }
 
 .site-header__logo {
-  width: 36px;
-  height: 36px;
+  width: clamp(34px, 3vw, 42px);
+  height: clamp(34px, 3vw, 42px);
   flex: 0 0 auto;
   object-fit: contain;
 }
@@ -229,8 +229,11 @@
 
 .hero-image {
   position: relative;
-  width: 100%;
+  width: min(100%, 360px);
   max-width: 360px;
+  height: auto;
+  aspect-ratio: 16 / 13;
+  object-fit: contain;
   opacity: 0.72;
   filter: drop-shadow(0 24px 40px rgba(22, 32, 51, 0.12));
   transform: translate(0, 0);
@@ -521,25 +524,113 @@
   line-height: 1.7;
 }
 
+@media (max-width: 1100px) {
+  .site-header__inner,
+  .about-section,
+  .goals-section,
+  .methodology-section,
+  .results-section,
+  .contacts-section,
+  .site-footer__inner {
+    max-width: 100%;
+  }
+
+  .hero-content {
+    padding: 48px 40px;
+  }
+
+  .hero-copy {
+    max-width: 620px;
+  }
+
+  .hero-background {
+    right: 2px;
+    width: min(34%, 320px);
+  }
+
+  .about-section__list,
+  .methodology-section__list,
+  .results-section__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header__inner {
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .site-header__nav {
+    width: 100%;
+  }
+
+  .site-header__list {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .hero-content {
+    padding: 40px 32px;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    padding-right: 120px;
+  }
+
+  .hero-background {
+    top: auto;
+    right: -8px;
+    bottom: 8px;
+    width: min(32%, 240px);
+    opacity: 0.2;
+  }
+
+  .contacts-section__list {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .site-header {
-    padding: 14px 16px;
+    padding: 12px 16px;
   }
 
   .site-header__inner {
     flex-direction: column;
     align-items: flex-start;
+    gap: 12px;
+  }
+
+  .site-header__nav {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .site-header__brand {
+    gap: 10px;
+    font-size: 0.95rem;
+    letter-spacing: 0.14em;
   }
 
   .site-header__list {
-    width: 100%;
-    flex-direction: column;
+    width: max-content;
+    min-width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding-bottom: 2px;
   }
 
   .site-header__link {
-    width: 100%;
-    justify-content: flex-start;
+    width: auto;
+    min-height: 38px;
+    justify-content: center;
     padding-inline: 14px;
+    white-space: nowrap;
   }
 
   .hero-section {
@@ -553,14 +644,15 @@
 
   .hero-copy {
     max-width: none;
+    padding-right: 0;
   }
 
   .hero-background {
     top: auto;
-    right: -20px;
-    bottom: -12px;
-    width: 58%;
-    opacity: 0.24;
+    right: -14px;
+    bottom: -10px;
+    width: min(54%, 280px);
+    opacity: 0.22;
   }
 
   .hero-title {
@@ -580,13 +672,10 @@
     border-radius: 22px;
   }
 
-  .hero-visual::before {
-    inset: 12px;
-    border-radius: 16px;
-  }
-
   .hero-image {
     width: 100%;
+    max-width: 280px;
+    aspect-ratio: auto;
     transform: none;
   }
 
@@ -619,5 +708,73 @@
   .site-footer__inner {
     padding: 24px 22px;
     border-radius: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-content {
+    padding: 28px 20px;
+  }
+
+  .hero-subtitle {
+    margin-top: 16px;
+  }
+
+  .hero-description {
+    margin-top: 16px;
+  }
+
+  .about-section__item,
+  .goals-section__item,
+  .methodology-section__item,
+  .results-section__item,
+  .contacts-section__item {
+    padding-inline: 18px;
+  }
+
+  .contacts-section__item {
+    gap: 8px;
+  }
+
+  .site-footer__inner {
+    padding: 22px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    padding: 10px 12px;
+  }
+
+  .site-header__brand {
+    gap: 8px;
+    font-size: 0.88rem;
+    letter-spacing: 0.12em;
+  }
+
+  .site-header__logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .site-header__link {
+    min-height: 36px;
+    padding-inline: 12px;
+    font-size: 0.92rem;
+  }
+
+  .hero-section {
+    padding-top: 36px;
+  }
+
+  .hero-background {
+    right: -18px;
+    bottom: -6px;
+    width: min(62%, 220px);
+    opacity: 0.18;
+  }
+
+  .hero-actions {
+    gap: 10px;
   }
 }
