@@ -1,36 +1,47 @@
 export function ContentSection({ id, title, description, items }) {
   const isAboutSection = id === 'about'
   const isGoalsSection = id === 'goals'
+  const isMethodologySection = id === 'methodology'
 
   const sectionClassName = isAboutSection
     ? 'about-section'
     : isGoalsSection
       ? 'goals-section'
-      : undefined
+      : isMethodologySection
+        ? 'methodology-section'
+        : undefined
 
   const titleClassName = isAboutSection
     ? 'about-section__title'
     : isGoalsSection
       ? 'goals-section__title'
-      : undefined
+      : isMethodologySection
+        ? 'methodology-section__title'
+        : undefined
 
   const descriptionClassName = isAboutSection
     ? 'about-section__description'
     : isGoalsSection
       ? 'goals-section__description'
-      : undefined
+      : isMethodologySection
+        ? 'methodology-section__description'
+        : undefined
 
   const listClassName = isAboutSection
     ? 'about-section__list'
     : isGoalsSection
       ? 'goals-section__list'
-      : undefined
+      : isMethodologySection
+        ? 'methodology-section__list'
+        : undefined
 
   const itemClassName = isAboutSection
     ? 'about-section__item'
     : isGoalsSection
       ? 'goals-section__item'
-      : undefined
+      : isMethodologySection
+        ? 'methodology-section__item'
+        : undefined
 
   return (
     <section className={sectionClassName} id={id}>
