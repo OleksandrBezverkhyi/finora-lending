@@ -54,6 +54,15 @@
   margin: 0 auto;
 }
 
+.site-header__controls {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+}
+
 .site-header__brand {
   display: inline-flex;
   align-items: center;
@@ -79,11 +88,52 @@
 
 .site-header__nav {
   display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+}
+
+.language-switcher__button {
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  color: var(--heading-color);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.language-switcher__button:hover,
+.language-switcher__button:focus-visible {
+  background: rgba(37, 99, 235, 0.1);
+  transform: translateY(-1px);
+}
+
+.language-switcher__button--active {
+  background: var(--accent-color);
+  color: #ffffff;
 }
 
 .site-header__list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  width: min(100%, 760px);
   gap: 10px;
   margin: 0;
   padding: 0;
@@ -94,11 +144,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   min-height: 42px;
   padding: 0 16px;
   border: 1px solid transparent;
   border-radius: 999px;
   color: var(--heading-color);
+  text-align: center;
   text-decoration: none;
   transition:
     border-color 0.2s ease,
@@ -561,11 +613,19 @@
     gap: 18px;
   }
 
+  .site-header__controls {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .site-header__nav {
     width: 100%;
   }
 
   .site-header__list {
+    display: flex;
     width: 100%;
     gap: 8px;
   }
@@ -603,6 +663,11 @@
     gap: 12px;
   }
 
+  .site-header__controls {
+    width: 100%;
+    gap: 12px;
+  }
+
   .site-header__nav {
     width: 100%;
     overflow-x: auto;
@@ -631,6 +696,10 @@
     justify-content: center;
     padding-inline: 14px;
     white-space: nowrap;
+  }
+
+  .language-switcher {
+    align-self: flex-start;
   }
 
   .hero-section {
@@ -761,6 +830,17 @@
     min-height: 36px;
     padding-inline: 12px;
     font-size: 0.92rem;
+  }
+
+  .language-switcher {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .language-switcher__button {
+    flex: 1 1 0;
+    min-height: 36px;
+    padding-inline: 10px;
   }
 
   .hero-section {
