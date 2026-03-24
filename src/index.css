@@ -6,8 +6,10 @@
   --accent-color: #2563eb;
   --border-color: #d6dfef;
   --hero-shadow: 0 24px 60px rgba(23, 37, 84, 0.12);
+  --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-display: 'Trebuchet MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.5;
   font-weight: 400;
   color: var(--text-color);
@@ -36,6 +38,10 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 0.97rem + 0.16vw, 1.08rem);
+  line-height: 1.7;
 }
 
 img,
@@ -45,6 +51,11 @@ canvas,
 video {
   display: block;
   max-width: 100%;
+  height: auto;
+}
+
+picture {
+  width: 100%;
 }
 
 input,
@@ -71,8 +82,45 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+li {
   overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.18;
+}
+
+p,
+li,
+a,
+button,
+input,
+textarea,
+select {
+  font-size: inherit;
+}
+
+p,
+li {
+  text-wrap: pretty;
 }
 
 ul,
@@ -101,4 +149,12 @@ select:focus-visible {
 
 #root {
   min-height: 100vh;
+}
+
+
+@media (max-width: 640px) {
+  body {
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
 }
