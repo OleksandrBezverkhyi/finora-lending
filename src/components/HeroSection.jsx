@@ -1,6 +1,14 @@
 import heroImage from '../assets/hero-finora.svg'
 
-export function HeroSection({ id, titleUa, titleEn, description, actions }) {
+export function HeroSection({
+  id,
+  kicker,
+  title,
+  subtitle,
+  description,
+  actions,
+  actionsAriaLabel,
+}) {
   const titleId = `${id}-title`
   const subtitleId = `${id}-subtitle`
   const descriptionId = `${id}-description`
@@ -20,18 +28,18 @@ export function HeroSection({ id, titleUa, titleEn, description, actions }) {
         </figure>
 
         <div className="hero-copy">
-          <p className="hero-kicker">Проєкт Finora</p>
+          <p className="hero-kicker">{kicker}</p>
           <h1 className="hero-title" id={titleId}>
-            {titleUa}
+            {title}
           </h1>
-          <p className="hero-subtitle" id={subtitleId} lang="en">
-            {titleEn}
+          <p className="hero-subtitle" id={subtitleId}>
+            {subtitle}
           </p>
           <p className="hero-description" id={descriptionId}>
             {description}
           </p>
 
-          <div className="hero-actions" aria-label="Основні дії сторінки">
+          <div className="hero-actions" aria-label={actionsAriaLabel}>
             {actions.map((action, index) => (
               <a
                 aria-label={action.label}
