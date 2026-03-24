@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="faviconTitle faviconDesc">
+  <title id="faviconTitle">Finora favicon</title>
+  <desc id="faviconDesc">Blue and teal Finora monogram icon.</desc>
+  <defs>
+    <linearGradient id="finoraGradient" x1="8" x2="56" y1="8" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2563eb" />
+      <stop offset="1" stop-color="#14b8a6" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#finoraGradient)" />
+  <rect x="15" y="13" width="34" height="38" rx="10" fill="#ffffff" />
+  <rect x="23" y="21" width="8" height="22" rx="4" fill="#162033" />
+  <rect x="23" y="21" width="18" height="8" rx="4" fill="#162033" />
+  <rect x="23" y="31" width="14" height="8" rx="4" fill="#162033" />
+</svg>
