@@ -2,6 +2,7 @@ export function ContentSection({ id, title, description, items }) {
   const isAboutSection = id === 'about'
   const isGoalsSection = id === 'goals'
   const isMethodologySection = id === 'methodology'
+  const isResultsSection = id === 'results'
 
   const sectionClassName = isAboutSection
     ? 'about-section'
@@ -9,7 +10,9 @@ export function ContentSection({ id, title, description, items }) {
       ? 'goals-section'
       : isMethodologySection
         ? 'methodology-section'
-        : undefined
+        : isResultsSection
+          ? 'results-section'
+          : undefined
 
   const titleClassName = isAboutSection
     ? 'about-section__title'
@@ -17,7 +20,9 @@ export function ContentSection({ id, title, description, items }) {
       ? 'goals-section__title'
       : isMethodologySection
         ? 'methodology-section__title'
-        : undefined
+        : isResultsSection
+          ? 'results-section__title'
+          : undefined
 
   const descriptionClassName = isAboutSection
     ? 'about-section__description'
@@ -25,7 +30,9 @@ export function ContentSection({ id, title, description, items }) {
       ? 'goals-section__description'
       : isMethodologySection
         ? 'methodology-section__description'
-        : undefined
+        : isResultsSection
+          ? 'results-section__description'
+          : undefined
 
   const listClassName = isAboutSection
     ? 'about-section__list'
@@ -33,7 +40,9 @@ export function ContentSection({ id, title, description, items }) {
       ? 'goals-section__list'
       : isMethodologySection
         ? 'methodology-section__list'
-        : undefined
+        : isResultsSection
+          ? 'results-section__list'
+          : undefined
 
   const itemClassName = isAboutSection
     ? 'about-section__item'
@@ -41,7 +50,9 @@ export function ContentSection({ id, title, description, items }) {
       ? 'goals-section__item'
       : isMethodologySection
         ? 'methodology-section__item'
-        : undefined
+        : isResultsSection
+          ? 'results-section__item'
+          : undefined
 
   return (
     <section className={sectionClassName} id={id}>
