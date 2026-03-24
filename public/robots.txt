@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oleksandrbezverkhyi.github.io/finora-lending/sitemap.xml
