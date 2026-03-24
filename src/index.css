@@ -1,0 +1,42 @@
+:root {
+  --page-background: #f5f7fb;
+  --surface-color: #ffffff;
+  --heading-color: #162033;
+  --text-color: #4b5565;
+  --accent-color: #2563eb;
+  --border-color: #d6dfef;
+  --hero-shadow: 0 24px 60px rgba(23, 37, 84, 0.12);
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-color);
+  background: var(--page-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+}
+
+main {
+  display: block;
+}
+
+a {
+  color: inherit;
+}

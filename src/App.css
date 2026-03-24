@@ -1,0 +1,108 @@
+.hero-section {
+  padding: 72px 20px 56px;
+}
+
+.hero-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px;
+  border: 1px solid var(--border-color);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at top right, rgba(49, 111, 255, 0.18), transparent 32%),
+    radial-gradient(circle at bottom left, rgba(0, 180, 120, 0.12), transparent 28%),
+    var(--surface-color);
+  box-shadow: var(--hero-shadow);
+}
+
+.hero-kicker {
+  margin: 0 0 16px;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  max-width: 14ch;
+  margin: 0;
+  color: var(--heading-color);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.98;
+}
+
+.hero-subtitle {
+  max-width: 44rem;
+  margin: 20px 0 0;
+  color: var(--heading-color);
+  font-size: clamp(1.1rem, 2.3vw, 1.5rem);
+  line-height: 1.35;
+}
+
+.hero-description {
+  max-width: 42rem;
+  margin: 20px 0 0;
+  color: var(--text-color);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  color: var(--heading-color);
+  background: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.hero-link:hover,
+.hero-link:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--accent-color);
+}
+
+.hero-link-primary {
+  border-color: transparent;
+  color: #ffffff;
+  background: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 48px 16px 40px;
+  }
+
+  .hero-content {
+    padding: 32px 24px;
+    border-radius: 24px;
+  }
+
+  .hero-title {
+    max-width: none;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-link {
+    width: 100%;
+  }
+}
