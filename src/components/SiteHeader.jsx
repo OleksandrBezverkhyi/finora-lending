@@ -2,7 +2,11 @@ export function SiteHeader({ navigationItems }) {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <a className="site-header__brand" href="#hero">
+        <a
+          aria-label="Finora — перейти до початку сторінки"
+          className="site-header__brand"
+          href="#hero"
+        >
           Finora
         </a>
 
@@ -10,7 +14,11 @@ export function SiteHeader({ navigationItems }) {
           <ul className="site-header__list">
             {navigationItems.map((item) => (
               <li key={item.href}>
-                <a className="site-header__link" href={item.href}>
+                <a
+                  aria-label={`Перейти до секції ${item.label}`}
+                  className="site-header__link"
+                  href={item.href}
+                >
                   {item.label}
                 </a>
               </li>

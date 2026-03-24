@@ -54,19 +54,32 @@ export function ContentSection({ id, title, description, items }) {
           ? 'results-section__item'
           : undefined
 
+  const titleId = `${id}-title`
+  const descriptionId = `${id}-description`
+  const ListTag = isGoalsSection ? 'ol' : 'ul'
+
   return (
-    <section className={sectionClassName} id={id}>
-      <h2 className={titleClassName}>{title}</h2>
-      <p className={descriptionClassName}>{description}</p>
+    <section
+      aria-describedby={descriptionId}
+      aria-labelledby={titleId}
+      className={sectionClassName}
+      id={id}
+    >
+      <h2 className={titleClassName} id={titleId}>
+        {title}
+      </h2>
+      <p className={descriptionClassName} id={descriptionId}>
+        {description}
+      </p>
 
       {items?.length ? (
-        <ul className={listClassName}>
+        <ListTag className={listClassName}>
           {items.map((item) => (
             <li className={itemClassName} key={item}>
               {item}
             </li>
           ))}
-        </ul>
+        </ListTag>
       ) : null}
     </section>
   )

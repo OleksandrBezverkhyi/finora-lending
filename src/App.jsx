@@ -10,26 +10,32 @@ function App() {
 
   return (
     <>
-      <SiteHeader navigationItems={navigationItems} />
+      <a className="skip-link" href="#main-content">
+        Перейти до основного вмісту
+      </a>
 
-      <main>
-        <HeroSection {...hero} />
-        <ContentSection {...about} />
-        <ContentSection {...goals} />
-        <ContentSection {...methodology} />
-        <ContentSection {...results} />
-        <ContactSection {...contacts} />
-      </main>
+      <div className="page-shell">
+        <SiteHeader navigationItems={navigationItems} />
 
-      <footer className="site-footer">
-        <div className="site-footer__inner">
-          <p className="site-footer__title">Finora</p>
-          <p className="site-footer__text">
-            Personal finance project landing page focused on income, expense,
-            analytics, and budgeting workflows.
-          </p>
-        </div>
-      </footer>
+        <main className="page-main" id="main-content" tabIndex="-1">
+          <HeroSection {...hero} />
+          <ContentSection {...about} />
+          <ContentSection {...goals} />
+          <ContentSection {...methodology} />
+          <ContentSection {...results} />
+          <ContactSection {...contacts} />
+        </main>
+
+        <footer className="site-footer" aria-label="Нижній колонтитул сайту">
+          <div className="site-footer__inner">
+            <p className="site-footer__title">Finora</p>
+            <p className="site-footer__text">
+              Personal finance project landing page focused on income, expense,
+              analytics, and budgeting workflows.
+            </p>
+          </div>
+        </footer>
+      </div>
     </>
   )
 }
