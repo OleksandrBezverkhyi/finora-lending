@@ -1,16 +1,101 @@
-# React + Vite
+# Finora Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Односторінковий вебсайт для представлення проєкту `Finora` — веборієнтованої інформаційної системи персонального обліку доходів і витрат з аналітикою та бюджетуванням.
 
-Currently, two official plugins are available:
+Лендінг реалізовано на `React` та `JavaScript` з використанням `Vite`. Проєкт містить двомовний інтерфейс (`українська / англійська`), адаптивний дизайн, базову SEO-оптимізацію та семантичну розмітку.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Функціональні можливості
 
-## React Compiler
+- односторінковий лендінг з секціями про проєкт, мету, методологію, результати та контакти
+- перемикання мов `UA / EN`
+- адаптивне меню та коректне відображення на різних розмірах екранів
+- SEO-метадані, `Open Graph`, `Schema.org`, `robots.txt`, `sitemap.xml`
+- favicon-набір для різних пристроїв
+- семантична HTML-структура та базова доступність
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Технології
 
-## Expanding the ESLint configuration
+- `React`
+- `JavaScript`
+- `Vite`
+- `CSS`
+- `ESLint`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Запуск проєкту
+
+1. Встановити залежності:
+
+```bash
+npm install
+```
+
+2. Запустити локальний сервер розробки:
+
+```bash
+npm run dev
+```
+
+3. Зібрати production-версію:
+
+```bash
+npm run build
+```
+
+4. Переглянути production preview:
+
+```bash
+npm run preview
+```
+
+## Структура проєкту
+
+```text
+finora-lending/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── data/
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+└── README.md
+```
+
+## Основні файли
+
+- `src/App.jsx` — основна структура сторінки та логіка перемикання мови
+- `src/components/SiteHeader.jsx` — header, навігація, перемикач мов
+- `src/components/HeroSection.jsx` — головний блок лендінгу
+- `src/components/ContentSection.jsx` — універсальна секція для контентних блоків
+- `src/components/ContactSection.jsx` — секція контактів
+- `src/data/siteContent.js` — локалізований контент для `uk/en`
+- `src/App.css` — стилі секцій та адаптивність
+- `src/index.css` — глобальні стилі, reset і типографіка
+
+## Git Flow
+
+У проєкті використовується стратегія `Git Flow`.
+
+Основні гілки:
+
+- `main` — стабільна версія проєкту
+- `develop` — основна гілка розробки
+- `feature/*` — окремі функціональні гілки для нових етапів роботи
+- `release/*` — підготовка релізу
+- `hotfix/*` — термінові виправлення після релізу
+
+Кожен етап розробки оформлювався окремими змістовними комітами відповідно до лабораторної роботи.
+
+## Репозиторій
+
+Публічний репозиторій проєкту:
+
+[https://github.com/OleksandrBezverkhyi/finora-lending](https://github.com/OleksandrBezverkhyi/finora-lending)
+
+## Автор
+
+Oleksandr Bezverkhyi
