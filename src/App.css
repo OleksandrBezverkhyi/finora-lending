@@ -403,6 +403,36 @@
   color: var(--accent-color);
 }
 
+.site-footer {
+  padding: 0 20px 32px;
+}
+
+.site-footer__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 28px 32px;
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  background: rgba(22, 32, 51, 0.96);
+  box-shadow: 0 20px 46px rgba(15, 23, 42, 0.18);
+}
+
+.site-footer__title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.site-footer__text {
+  max-width: 42rem;
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.7;
+}
+
 @media (max-width: 768px) {
   .site-header {
     padding: 14px 16px;
@@ -449,7 +479,8 @@
   .goals-section,
   .methodology-section,
   .results-section,
-  .contacts-section {
+  .contacts-section,
+  .site-footer {
     padding: 0 16px 40px;
   }
 
@@ -469,4 +500,10 @@
     left: 18px;
     transform: none;
   }
+
+  .site-footer__inner {
+    padding: 24px 22px;
+    border-radius: 24px;
+  }
 }
+

@@ -21,8 +21,14 @@ function App() {
         <ContactSection {...contacts} />
       </main>
 
-      <footer>
-        <p>Finora project landing page.</p>
+      <footer className="site-footer">
+        <div className="site-footer__inner">
+          <p className="site-footer__title">Finora</p>
+          <p className="site-footer__text">
+            Personal finance project landing page focused on income, expense,
+            analytics, and budgeting workflows.
+          </p>
+        </div>
       </footer>
     </>
   )
