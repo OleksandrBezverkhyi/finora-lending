@@ -1,13 +1,21 @@
 export function ContentSection({ id, title, description, items }) {
+  const isAboutSection = id === 'about'
+
   return (
-    <section id={id}>
-      <h2>{title}</h2>
-      <p>{description}</p>
+    <section className={isAboutSection ? 'about-section' : undefined} id={id}>
+      <h2 className={isAboutSection ? 'about-section__title' : undefined}>
+        {title}
+      </h2>
+      <p className={isAboutSection ? 'about-section__description' : undefined}>
+        {description}
+      </p>
 
       {items?.length ? (
-        <ul>
+        <ul className={isAboutSection ? 'about-section__list' : undefined}>
           {items.map((item) => (
-            <li key={item}>{item}</li>
+            <li className={isAboutSection ? 'about-section__item' : undefined} key={item}>
+              {item}
+            </li>
           ))}
         </ul>
       ) : null}
