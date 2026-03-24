@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 520" fill="none">
+  <defs>
+    <linearGradient id="finoraCard" x1="112" y1="96" x2="512" y2="408" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.96" />
+      <stop offset="1" stop-color="#eef5ff" stop-opacity="0.92" />
+    </linearGradient>
+    <linearGradient id="finoraAccent" x1="148" y1="142" x2="436" y2="330" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2563eb" />
+      <stop offset="1" stop-color="#14b8a6" />
+    </linearGradient>
+    <linearGradient id="finoraSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dbeafe" />
+      <stop offset="1" stop-color="#ccfbf1" />
+    </linearGradient>
+    <filter id="shadowLarge" x="76" y="60" width="500" height="388" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset dy="28"/>
+      <feGaussianBlur stdDeviation="18"/>
+      <feColorMatrix values="0 0 0 0 0.0862745 0 0 0 0 0.12549 0 0 0 0 0.2 0 0 0 0.16 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_hero"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow_hero" result="shape"/>
+    </filter>
+    <filter id="shadowSmall" x="0" y="0" width="640" height="520" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset dy="14"/>
+      <feGaussianBlur stdDeviation="12"/>
+      <feColorMatrix values="0 0 0 0 0.0862745 0 0 0 0 0.12549 0 0 0 0 0.2 0 0 0 0.12 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_small"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow_small" result="shape"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadowLarge)">
+    <rect x="112" y="96" width="392" height="260" rx="30" fill="url(#finoraCard)"/>
+    <rect x="112.75" y="96.75" width="390.5" height="258.5" rx="29.25" stroke="#d6dfef" stroke-opacity="0.92" stroke-width="1.5"/>
+
+    <rect x="148" y="134" width="112" height="76" rx="20" fill="#ffffff"/>
+    <rect x="148.75" y="134.75" width="110.5" height="74.5" rx="19.25" stroke="#dbe7f7" stroke-width="1.5"/>
+    <circle cx="180" cy="164" r="11" fill="#2563eb" fill-opacity="0.14"/>
+    <path d="M180 157v14M173 164h14" stroke="#2563eb" stroke-linecap="round" stroke-width="2.5"/>
+    <rect x="148" y="228" width="160" height="10" rx="5" fill="#dbeafe"/>
+    <rect x="148" y="248" width="118" height="10" rx="5" fill="#e5eefc"/>
+    <rect x="148" y="268" width="144" height="10" rx="5" fill="#e5eefc"/>
+
+    <rect x="284" y="134" width="184" height="144" rx="24" fill="#ffffff"/>
+    <rect x="284.75" y="134.75" width="182.5" height="142.5" rx="23.25" stroke="#dbe7f7" stroke-width="1.5"/>
+    <path d="M314 248l34-42 40 24 48-58" stroke="url(#finoraAccent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+    <circle cx="314" cy="248" r="8" fill="#2563eb"/>
+    <circle cx="348" cy="206" r="8" fill="#2563eb"/>
+    <circle cx="388" cy="230" r="8" fill="#14b8a6"/>
+    <circle cx="436" cy="172" r="8" fill="#14b8a6"/>
+
+    <rect x="148" y="300" width="320" height="26" rx="13" fill="#eff6ff"/>
+    <rect x="148" y="300" width="228" height="26" rx="13" fill="url(#finoraAccent)" fill-opacity="0.84"/>
+    <circle cx="378" cy="313" r="17" fill="#ffffff" stroke="#cddbf2" stroke-width="3"/>
+  </g>
+
+  <g filter="url(#shadowSmall)">
+    <rect x="408" y="54" width="144" height="112" rx="24" fill="#ffffff" fill-opacity="0.94"/>
+    <rect x="408.75" y="54.75" width="142.5" height="110.5" rx="23.25" stroke="#d9e4f4" stroke-width="1.5"/>
+    <rect x="438" y="88" width="84" height="12" rx="6" fill="#dbeafe"/>
+    <rect x="438" y="112" width="56" height="12" rx="6" fill="#bfdbfe"/>
+    <rect x="438" y="136" width="96" height="12" rx="6" fill="#ccfbf1"/>
+  </g>
+
+  <g filter="url(#shadowSmall)">
+    <rect x="64" y="338" width="168" height="120" rx="26" fill="#ffffff" fill-opacity="0.94"/>
+    <rect x="64.75" y="338.75" width="166.5" height="118.5" rx="25.25" stroke="#d9e4f4" stroke-width="1.5"/>
+    <path d="M98 420c28-44 56-44 84 0" stroke="url(#finoraAccent)" stroke-linecap="round" stroke-width="10"/>
+    <circle cx="98" cy="420" r="8" fill="#2563eb"/>
+    <circle cx="182" cy="420" r="8" fill="#14b8a6"/>
+    <rect x="96" y="364" width="90" height="12" rx="6" fill="#dbeafe"/>
+  </g>
+</svg>
