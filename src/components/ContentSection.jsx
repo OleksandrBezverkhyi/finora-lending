@@ -1,19 +1,46 @@
 export function ContentSection({ id, title, description, items }) {
   const isAboutSection = id === 'about'
+  const isGoalsSection = id === 'goals'
+
+  const sectionClassName = isAboutSection
+    ? 'about-section'
+    : isGoalsSection
+      ? 'goals-section'
+      : undefined
+
+  const titleClassName = isAboutSection
+    ? 'about-section__title'
+    : isGoalsSection
+      ? 'goals-section__title'
+      : undefined
+
+  const descriptionClassName = isAboutSection
+    ? 'about-section__description'
+    : isGoalsSection
+      ? 'goals-section__description'
+      : undefined
+
+  const listClassName = isAboutSection
+    ? 'about-section__list'
+    : isGoalsSection
+      ? 'goals-section__list'
+      : undefined
+
+  const itemClassName = isAboutSection
+    ? 'about-section__item'
+    : isGoalsSection
+      ? 'goals-section__item'
+      : undefined
 
   return (
-    <section className={isAboutSection ? 'about-section' : undefined} id={id}>
-      <h2 className={isAboutSection ? 'about-section__title' : undefined}>
-        {title}
-      </h2>
-      <p className={isAboutSection ? 'about-section__description' : undefined}>
-        {description}
-      </p>
+    <section className={sectionClassName} id={id}>
+      <h2 className={titleClassName}>{title}</h2>
+      <p className={descriptionClassName}>{description}</p>
 
       {items?.length ? (
-        <ul className={isAboutSection ? 'about-section__list' : undefined}>
+        <ul className={listClassName}>
           {items.map((item) => (
-            <li className={isAboutSection ? 'about-section__item' : undefined} key={item}>
+            <li className={itemClassName} key={item}>
               {item}
             </li>
           ))}
